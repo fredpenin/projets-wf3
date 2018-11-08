@@ -1,0 +1,144 @@
+//POLICES
+@font-face{
+    font-family: "shelter";
+    src: url("../fonts/shelter.ttf");
+}
+//VARIABLES
+$couleur-texte:white;
+$couleur-jaune: #fbc531;
+$couleur-gris-fond: #f5f6fa;
+
+body{
+    background-color: $couleur-gris-fond;
+    font-size: 16px;
+    margin: 0;
+
+}
+.contenu_site{
+    background: radial-gradient(#487eb0, #192a56);
+    //border: 2px solid red;
+    max-width: 1200px;
+    margin: 15px auto;
+}
+
+.container-fluid{
+    max-width: 1200px;
+}
+//.....ENTETE...........
+header{
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    max-width: 1200px;
+    height:400px;
+}
+//........MENU NAV..............
+nav{
+    color: $couleur-texte;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    max-width: 1200px;
+}
+.nav_menu{
+    position: fixed;
+    width: 100%;
+}
+.nav_cases{
+    border-right: 2px solid $couleur-jaune;
+    background-color: rgba($color: $couleur-gris-fond, $alpha: 0.2);
+    border-bottom: 1px solid $couleur-gris-fond;
+    &:hover{
+        border-bottom: 3px solid $couleur-jaune ;
+
+    }
+//........SIGNATURE..........
+}
+.sign_case{
+    display: block;
+    font-family: "shelter", Georgia, serif;
+    padding-top: 200px;
+    margin-left: 45%;
+    width: 250px;
+    //height: 150px;
+    color: $couleur-texte;
+    font-size: 3rem;
+}
+.sign_case2{
+    margin-top: 200px;
+    margin-left: 38%;
+    color: $couleur-texte;
+    font-size: 3rem;
+}
+
+
+main{
+    width: 100%;
+    display:block;
+    background-image: url("../images/oeil.jpg"), url("../images/trou_noir.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+//......ARTICLES
+.article{
+    display:flex;
+    width: 100%;
+    height: 200px;
+
+//sections à simplifier par al suite
+}
+.sect_1-1{
+    width:30%;
+    background-color: #353b48;
+    opacity: 0.8;
+    font-size: 3rem;
+    padding: 50px;
+    color: #f7d794; 
+}
+.sect_1-2{
+    width: 70%;
+    background-color: #7f8fa6;
+}
+
+.sect_2-1{
+    width:70%;
+    background-color: #718093;
+}
+.sect_2-2{
+    width: 30%;
+    background-color: #2f3640;
+    opacity: 0.8;
+    font-size: 3rem;
+    padding: 50px;
+    color: #f7d794;
+}
+.sect_3-1{
+    width:30%;
+    background-color: #353b48;
+    opacity: 0.8;
+    font-size: 3rem;
+    padding: 50px;
+    color: #f7d794; 
+}
+.sect_3-2{
+    width: 70%;
+    background-color: #7f8fa6;
+}
+
+
+//.....................................
+// ............RESPONSIVE..............
+@media screen and (max-width: 600px){
+    header{
+        width:600px;
+        height:200px;
+    }
+    .nav_menu{
+        display:block;
+    }
+    .sign_case, .sign_case{
+        font-size: 1rem;
+        padding-top: 120px;
+        margin-left: 10px;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,134 @@
+//.......Variables : ..........//
+$barre_de_menus : #C55394;
+$hover_menu : #EB43A3;
+$titre_h1 : #C55394;
+$autres_titres : #EB43A3;
+$footer : #E577B5;
+$noir : #333;
+$blanc : #FFF;
+////.........Polices...........////
+@font-face{
+    font-family: "courgette";
+    src: url("../fonts/courgette-regular.ttf"); 
+}
+@font-face{
+    font-family: "cursive";
+    src: url("../fonts/cursive-standard.ttf");
+}
+////////////////////////////////////
+
+body{
+    background: url("../images/background.png");
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2{
+    font-family: "courgette", "cursive";
+    font-style: italic;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+h2, h3{
+    color: $autres_titres;
+    //font-size: 1.2rem;
+}
+h3{
+    font-size: 1.2rem;
+}
+a{
+    color: $blanc;
+    text-decoration: none;
+}
+//////////////////////////////////////////////////////////////////////////////////////
+// .....................................HEADER......................................//
+header{
+    background-color: $barre_de_menus;
+    //max-width: 1200px;
+}
+.case_nav{
+    padding: 5px;
+    white-space: nowrap;
+    &:hover{
+        background-color: $hover_menu;
+    }
+}
+//...................................................................................//
+
+// Titre
+#main_title{
+    width: 250px;
+    height: 100px;
+    margin: auto;
+    background: url("../images/rainbow.png");
+    background-size: cover;
+    h1{
+        color: $titre_h1;
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////
+// .......................................MAIN.......................................//
+main{
+    width: 60%;
+    margin: auto;
+    background-color: $blanc;
+    box-shadow: 0 0 10px $noir;
+    border-radius: 5px;
+    padding : 20px;
+    
+}
+//............section 2................
+.container_imgs_licornes{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+img {
+    width:80%;
+  }
+  figcaption{
+      background-color: rgba(54, 54, 54, 0.5);
+
+  }
+
+//...........section 3.................
+.section3{
+    width: 100%;
+    display: flex;
+    //width: 50%;
+    .section3_gauche{
+        width: 60%;
+        iframe{
+            width: 300px;
+            height: 250px;
+        }
+    }
+    .section3_droite{
+        width: 40%;
+        .section3_droite_haut{
+    
+        }
+        .section3_droite_bas{
+    
+        }
+    }
+    button{
+        border-radius: 5px;
+        background-color: $autres_titres;
+        border-color: $footer;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+// .......................................FOOTER.......................................//
+  footer{
+      background-color: $barre_de_menus;
+      span{
+        position: relative;
+        left: 80%;
+        color: $blanc;
+      }
+  }
+  //////////////////////////////////////////////////////////////////////////////////////

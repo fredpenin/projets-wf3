@@ -1,0 +1,110 @@
+<!-- Créer un mini-site vitrine pour présenter un évenement
+    - Présentation - programme - contact + google map- 
+    - MàJ énoncé : Intégrer un son avec les contrôles et une vidéo en lecture automatique et en boucle 
+    - MàJ 2 : adapter le site pour qu'il soit responsive : un breakpoint entre desktop et smartphone 
+    - MàJ 3 : ajouter un burger menu sur version mobile -->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Sortie de Kaamelott : Le Film</title>
+        <meta charset="utf-8" />
+        <!-- ....déclaration du viewport, "width=device-width" permet de définir soi même la résolution dans le CSS .... -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css\stylesheet.css" />
+    </head>
+
+    <body>
+        <!-- ....EN TETE.... -->
+        <header id="pres">
+            <h1>Kaamelott : Le Film</h1>
+        </header>
+
+<!-- .........MENU GAUCHE......... -->
+        <div class="burgermenu">
+            <label for="burger" id="labburger"><img src="images/icone-burger-menu.jpg" ></label>
+            <input type="checkbox" name="burg" id="burger" />
+            <nav>
+                <ul>
+                    <li><a class="survol" href="#pres">Présentation</a><br /></li>
+                    <li><a class="survol" href="#prog">Programme</a><br /></li>
+                    <li><a class="survol" href="#cont">Contact</a><br /></li>
+                </ul>
+            </nav>
+        </div>
+<!-- .........CONTENU PRINCIPAL.......... -->
+        <main>
+                <audio controls>
+                    <source src="medias/Kaamelott_musique_generique_livre_V.mp3" preload>
+                </audio>
+            <section>
+                <!-- ...ARTICLE 1... -->
+                <article>
+                    <h2>La série Kaamelott : la table ronde bientôt de retour au cinéma !</h2>
+                    <br />
+                    <video src="medias/video_Kaamelott_jeux_contre_sirop.mp4" autoplay loop alt="video regles du jeu de sirop" poster="images/logo.jpg"></video>
+                </article>
+                <aside>
+                    <img src="images\woohoo.jpg" class="img-aside" alt="woohoo" />
+                </aside>
+                <br />
+                <div class="clearboth"></div>
+                <!-- ...ARTICLE 2... -->
+                <article>
+                    <p>Longtemps évoquée, l’adaptation de la série <strong>Kaamelott au cinéma</strong> semblait au point mort : des tournages annoncés puis finalement reportés, 
+                        des problèmes juridiques puis de financement.<br /><br />
+                        Mais, <em>Alexandre Astier<em> a enfin confirmé que le scénario était terminé et que le tournage allait enfin débuter, un le premier film de ce qui devrait être une trilogie.</p>
+                </article>
+                <aside>
+                        <img src="images\onenagros.jpg" class="img-aside" alt="on en a gros" />
+                    
+                </aside>
+                <br />
+                <div class="clearboth"></div>
+                <!-- ...ARTICLE 3... -->
+                <article id="prog">
+                    <p>Le premier film sera la suite directe de la sixème saison : Réfugié à Rome, le Roi Arthur y fait son grand retour pour s'apposer à l'armée de son ancien ami Lancelot.</p>
+                    <br />
+                    <p>Pour patienter sir Astier nous avait promis une série de nouvelles, appelées Kaamelott - Résistance, devant nous narrer l'histoire des anciens 
+                    companions d'Arthur sur les terres de Bretagnes lors le reigne de Lancelot.</p>
+                    <p>Malheureusement, pas denouvelles de ce côté là.</p>
+                    <p>Pour patienter, les fans peuvent tout de même se pencher sur la série en bande dessinée (huit tômes à ce jour), qui racontent les aventures du roi Arthur et de ses chevaliers.</p>
+                    <br />
+                    <p>Et si vous passez par le Rhône, n'hésitez pas à faire un détour pour visiter le Château de Montmelas, qui a servi au tournage de la série.</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23626.59615734249!2d4.605089499949645!3d46.011298904508564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f486e530d738a7%3A0x3bcc826b551a2d79!2sCh%C3%A2teau+de+Montmelas!5e0!3m2!1sfr!2sfr!4v1536566408228" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </article>
+                <aside>
+                    <img src="images\bd.jpg" class="img-aside" alt="bande déssinée" />
+                </aside>
+                <div class="clearboth"></div>
+            </section>
+        </main>
+        <!-- ........BAS DE PAGE........ -->
+        <footer id="cont">
+            <form method="post">
+                <table>
+                    <tr>
+                        <td><label for="firstname">Prénom : </label></td>
+                        <td><input type="text" maxlength="50" name="firstname" /></td>
+                        <td><label for="lastname">Nom : </label></td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mailuser">Votre adresse e-mail : </label></td>
+                        <td colspan="3"><input type="text" maxlength="200" name="mailuser" id="mailform" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="msg">Saisissez votre message : </label></td>
+                        <td colspan=3 rowspan=5>
+                            <textarea name="msg"></textarea>
+                        </td>
+                    </tr>
+
+                
+                </table>
+                <button type="button">Envoyer le message</button>
+                <input type="reset" value="Réinitialiser le formulaire" />
+            </form>
+        </footer>        
+    </body>
+</html>

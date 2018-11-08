@@ -1,0 +1,74 @@
+////////////// HEADER /////////////////////
+header{
+    background-image: url("../img/background.jpg");
+    background-size:cover;
+    height: 500px;
+    h1{
+        color: white;
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+    h3{
+        color: white;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    
+    form{
+        margin-left: 50px;
+        margin-right: 50px;
+        
+        margin-top: 220px;
+        margin-bottom: 20px;
+
+        background-color: rgba(189, 195, 204, 0.9);
+        #formu{
+            align-items: center;
+
+        }
+        button{
+            vertical-align: middle;
+            margin-top: 1.5rem;
+        }
+        .form-group{
+            height: 100%;
+        }
+    }
+}
+////////////// MAIN ////////////////
+.lstVehicules{
+    margin-left: 50px;
+    margin-right: 300px;
+}
+
+////////////// FOOTER ///////////////
+footer{
+    img{
+        height: 75px;
+        width: 100px;
+    }
+}
+
+/////////////////////////////////////
+//////////// MEDIA QUERIES
+// /////////////////////////////////////
+@media screen and (max-width: 768px) {
+    
+    header form{
+        margin-top: 0;
+    }
+}
+
+// @media screen and (max-width: 992px) {
+//     form{
+//         margin-left: 0;
+//         margin-right: 100px;
+//     }
+// }
+
+// @media screen {
+//     form{
+//         margin-left: 200px;
+//         margin-right: 200px;
+//     }
+// }

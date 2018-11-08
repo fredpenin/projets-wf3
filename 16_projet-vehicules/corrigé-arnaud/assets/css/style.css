@@ -1,0 +1,52 @@
+/* ==================== *\
+ * Hero Banner
+\* ==================== */
+
+/* Hero container */
+
+.poster {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Default background-image */
+    background-image: url(http://osw3.net/tp/images/posters/roadster.jpg);
+}
+
+.hero-content {
+    /* height: 600px; */
+}
+
+
+
+/* Hero search bar */
+.search-bar {
+    margin-top: 380px;
+    margin-bottom: 180px;
+
+    text-align: center;
+}
+.search-bar select {
+    max-width: 300px;
+    margin: 1rem;
+    display: inline;
+}
+
+
+.model {
+    padding-left: 500px;
+    height: 300px;
+    position: relative;    
+}
+.illustration {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+}
+.info {
+    padding-top: 80px;
+}

@@ -1,0 +1,49 @@
+body{
+    border:1px solid black;
+    margin: 20px 20px 20px 20px;
+    background:linear-gradient(#f6e58d, #f0932b);
+}
+header{
+    width:600px;
+    height:350px;
+    border:1px solid black;
+    background-image: url("../images/porc-caramel.jpg");
+    background-size:cover;
+    margin:auto;
+}
+header strong{
+    text-align: center;
+    font-size:35px;
+    color:#f0932b;
+    text-shadow: 3px 3px 3px #d35400;
+}
+
+article{
+    border:1px solid black;
+    display:flex;
+    margin:20px 10px 20px 10px;
+    padding: 10px 20px 20px 20px;
+}
+
+.prems{
+    display:flex;
+    justify-content:space-around;
+}
+
+#ingredients{
+    background-color: #ffbe76;
+}
+
+#preparation{
+    background-color: #ff7979;
+}
+
+@media screen and (max-width: 645px){
+    header{
+        width:300px;
+        height:200px;
+    }
+    .prems{
+        display:block;
+    }
+}

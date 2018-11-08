@@ -1,0 +1,19 @@
+.carrejaune{
+    background-color:yellow;
+    position:relative;
+    float:right;
+    width:200px;
+    margin:0;
+}
+
+.carrevert{
+    background-color:green;
+    width:400px;
+    float:left;
+    position:relative;
+
+}
+.cercle{
+    diameter: 100px;
+    border-radius: circular;
+  }

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- CDN Bootstrap style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- my style -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.min.css" />
+</head>
+
+<body>
+    <!-- //////////////////// HEADER //////////////////////// -->
+    <header>
+        <section><!-- //////////////////// SECTION POUR LA NAVBAR /////////////////// -->
+            <div id="burgerMenu" class="container-fluid"></div>
+                <nav id="navBar" class="navbar navbar-dark">
+                    <a class="navbar-brand" href="#"></a>
+                    <button id="btnNavBar" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Louer une voiture <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Louer un utilitaire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Réserver un chauffeur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Découvrez nos agences</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Mon compte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+            </div>
+        </section><!-- /////////////////////// TITRE ////////////////////////// -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-4 col-lg-5"></div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <span id="title"><h1>Bienvenue à bord</h1></span>
+                        <span id="subTitle"><h3>Location de voiture 24h/24 et 7j/7</h3></span>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <section><!-- ///////////////// FORMULAIRE //////////////// -->     
+            <form>
+                <div class="container-fluid">
+                    <div id="formu" class="row">
+                        <!-- comboBox Adresse départ -->
+                        <div class="form-group col-sm-12 col-md-4 col-lg-3">
+                            <label for="cmbAdress"></label>
+                            <select class="form-control" id="cmbAdress" >
+                                <option value="">Adresse de départ</option>
+                                <option>Adresse1</option>
+                                <option>Adresse2</option>
+                                <option>Adresse3</option>
+                                <option>Adresse4</option>
+                            </select>
+                        </div>
+                        <!-- zone date début -->
+                        <div class="form-group col-sm-12 col-md-4 col-lg-3">
+                            <label for="inpDateStart"></label>
+                            <input type="date" class="form-control" id="inpDateStart" placeholder="Début de location">
+                        </div>
+                        <!-- zone date fin -->
+                        <div class="form-group col-sm-12 col-md-4 col-lg-3">
+                            <label for="inpDateEnd"></label>
+                            <input type="date" class="form-control" id="inpDateEnd" placeholder="Fin de location">
+                        </div>
+                        <!-- bouton Envoyer -->
+                        <div class="form-group col-sm-12 col-lg-3">
+                            <button type="button" class="btn btn-block btn-success">Valider ma recherche</button>
+                        </div>
+                    </div>
+                </div>       
+            </form>
+        </section>
+    </header>
+
+    <main>
+        <!-- ////// Barre de résultat et tri par prix ///////////// -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 col-sm-2 col-xl-2">
+                    <span>7 résultats</span>
+                </div>
+                <div class="col-2 col-sm-7 col-xl-8"></div>
+                <div class="form-group col-6 col-sm-3 col-xl-2">
+                <select class="form-control">
+                    <option>Prix croissant</option>
+                    <option>Prix décroissant</option>
+                </select>
+            </div>
+
+            </div>
+        </div>
+
+        <!-- .................. Véhicule1 .................. -->
+        <div class="container-fluid lstVehicules">
+            <div class="row">
+                <div class="col-sm-12 col-lg-5">
+                    <img src="assets/img/vehicule1.png" />
+                </div>
+                <div class="col-sm-12 col-lg-7">
+                    <h6>Peugeot 208</h6>
+                    <p>Diesel 5 portes, GPS, AutoRadio, Forfait 1000 km (0,5/km supplémentaire).</p>
+                    <div class="prixETagence">
+                        <span>999</span>
+                        <span>€ - Agence de Paris</span>
+                        <div><button type="button" class="btn btn-success">Réserver et Payer</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- .................. Véhicule2 .................. -->
+        <div class="container-fluid lstVehicules">
+            <div class="row">
+                <div class="col-sm-12 col-lg-5">
+                        <img src="assets/img/vehicule2.png" />
+                </div>
+                <div class="col-sm-12 col-lg-7">
+                    <h6>Ford Focus</h6>
+                    <p>Diesel 5 portes, GPS, AutoRadio, Forfait 1000 km (0,5/km supplémentaire).</p>
+                    <div class="prixETagence">
+                        <span>999</span>
+                        <span>€</span>
+                        <div><button type="button" class="btn btn-success">Réserver et Payer</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- .................. Véhicule3 .................. -->
+        <div class="container-fluid lstVehicules">
+            <div class="row">
+                <div class="col-sm-12 col-lg-5">
+                    <img src="assets/img/vehicule3.png" />
+                </div>
+                <div class="col-sm-12 col-lg-7">
+                    <h6>Audi A1</h6>
+                    <p>Diesel 5 portes, GPS, AutoRadio, Forfait 1000 km (0,55/km supplémentaire).</p>
+                    <div class="prixETagence">
+                        <span>1100</span>
+                        <span>€ - Agence de Paris</span>
+                        <div><button type="button" class="btn btn-success">Réserver et Payer</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- .................. Véhicule4 .................. -->
+        <div class="container-fluid lstVehicules">
+            <div class="row">
+                <div class="col-sm-12 col-lg-5">
+                    <img src="assets/img/vehicule4.png" />
+                </div>
+                <div class="col-sm-12 col-lg-7">
+                    <h6>Opel Mokka</h6>
+                    <p>Diesel 5 portes, GPS, AutoRadio, Forfait 1000 km (0,4/km supplémentaire).</p>
+                    <div class="prixETagence">
+                        <span>1150</span>
+                        <span>€ - Agence de Paris</span>
+                        <div><button type="button" class="btn btn-success">Réserver et Payer</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </main>
+        <!-- //////////// footer ////////////////// -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                    <div class="col-sm-3"></div>
+                <div class="col-sm-2">
+                        <img src="assets/img/agence.jpg" />
+                </div>
+                <div class="col-sm-4">
+                    <span>Notre Agence de Paris</span>
+                    <span>300 boulevard de vaugirard, 75015, Paris</span>
+                    <span>Ouvert 7j/7 de 09h à 13h et de 14h à 20h</span>
+                    <span>01 49 78 21 33</span>
+                    <span>contact@vtc.com</span>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- script jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- script popper  -->        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- script bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- my script -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

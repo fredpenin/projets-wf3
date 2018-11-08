@@ -1,0 +1,108 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Configuration de véhicule</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/sheetstyle.css" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <form method="post">
+            <h1>Formulaire de pré-commande</h1>
+            <!--<img src="images\logo-bateau.jpg" alt="Logo de bateau">-->
+            <br />
+            <!--Infos client-->
+            <div id="coordonnees">
+                <fieldset>
+                    <legend>Saisissez vos coordonnées : </legend><br />
+                    <label for="userlastname">Nom : </label>
+                    <input type="text" name="nom" id="userlastname" autofocus>
+                    <label for="userfirstname">Prénom : </label>
+                    <input type="text" name="prenom" id="userfirstname">
+                    <br /><br />
+                    <label for="adress">Adresse : </label>
+                    <input type="text" name="adresse" id="adress"> 
+                    <label for="cp">Code postal : </label>
+                    <input type="number" name="cp" id="cp" min="5" max="5">   
+                    <label for="city">Ville : </label>
+                    <input type="text" name="city" id="city">     
+                    <br /><br />
+                    <label for="tel">Téléphone : </label>
+                    <input type="number" name="tel" id="tel" min="10" max="10">   
+                    <br />
+                </fieldset>
+                <br />
+            </div>            
+            <!--Choix bateau-->
+            <fieldset>
+                <legend>Choisissez votre bateau : </legend><br />
+                <ol>
+                    <li>
+                        <label for="marque-modele">Marque et modèle : </label>
+                        <select>
+                            <optgroup label="voiliers" selected>
+                                <option>Flûte</option>
+                                <option>Galion</option>
+                                <option>Frégate</option>
+                            </optgroup>
+                            <optgroup label="moteurs" selected>
+                                <option>Chalutier</option>
+                                <option>Peniche</option>
+                                <option>Ferry</option>
+                            </optgroup>                
+                        </select>
+                    </li>
+                    <br /><br /><br />
+                    <!--couleur bateau-->
+                    <li>
+                        <label for="couleur">Choix de la couleur : </label>
+                        <br />
+                        <input type="radio" name="couleur" id="bois" /><!-- les 3 cases doivent avoir le même name pour être associées -->
+                        <label for="bois">bois naturel</label>
+                        <input type="radio" name="couleur" id="gris" />
+                        <label for="gris">gris</label>
+                        <input type="radio" name="couleur" id="pourpre" />
+                        <label for="pourpre">pourpre</label>
+                    </li>
+                    <!-- <input type="color" /> -->
+                    <br /><br /><br />
+                    <li>
+                        <label for="coloroption">Option de peinture : </label>
+                        <br />
+                        <input type="radio" name="couleur" id="metal" />
+                        <label for="metal">Métallisée</label>
+                        <input type="radio" name="couleur" id="mat" />
+                        <label for="mat">Mat</label>
+                        <input type="radio" name="couleur" id="brillant" />
+                        <label for="brillant">brillant</label>
+                        <br /><br /><br />
+                    </li>
+                    <!--options véhicule-->
+                    <li>
+                        <label for="options">Choix des options : </label>
+                        <br />
+                        <input type="checkbox" id="canot" name="canot" />
+                        <label for="canot">canot de sauvetage</label>
+                        <input type="checkbox" id="balise" name="balise" />
+                        <label for="balise">Balise de secours</label>
+                        <input type="checkbox" id="canon" name="canon" />
+                        <label for="canon">Canons</label>
+                        <input type="checkbox" id="perroquet" name="perroquet" />
+                        <label for="perroquet">Perroquet</label>
+                        <br /><br /><br />
+                    </li>
+                    <!--date livraison-->
+                    <li>
+                        <label for="date-livr">Date de livraison souhaitée : </label>
+                        <input type="date" name="date-livr" id="datelivr" min="2018-09-20" />
+                    </li>
+                </ol>
+            </fieldset>
+            <br />
+            <button type="button">Confirmer ma commande</button>
+            <input type="reset" value="Réinitialiser le formulaire" />
+        </form>
+    </body>
+</html>

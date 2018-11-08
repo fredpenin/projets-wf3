@@ -1,0 +1,22 @@
+table{
+    border-collapse:collapse;
+}
+
+thead{
+    background-color:#986FD9;
+}
+
+th, td {
+    border:3px solid black;
+    /*background-color:#CFBFE8;*/
+}
+
+table img{ /* redimentionne les Images dans le Tableau */
+    width:90px;
+}
+
+caption {
+    /*font-family:;*/
+    font-size:2em;
+    color:blue;
+}

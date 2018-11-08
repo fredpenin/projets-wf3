@@ -1,0 +1,85 @@
+// initialisation des variables
+$shiny-color:#badc58;
+//..........................................................
+
+body{
+    background-color: #ecf0f1;
+    font-size: 16px;
+}
+.conteneur_site{
+    background-color: white;
+    max-width: 1200px;
+    margin: 10px auto; // centre automatiquement le bloc; /!\ : obligé d'avoir un width ou max-width pour que ça fonctionne.
+}
+
+.btn_search{ // ... Shape de loupe copiée de css-tricks.com //
+     font-size: 5rem; /* This controls the size. */         //
+     display: inline-block;                                 //
+     width: 0.4em;                                          //
+     height: 0.4em;                                         //
+     border: 0.1em solid red;                             //
+     position: relative;                                    //
+     border-radius: 0.35em;                                 //
+}                                                           //
+.btn_search::before{                                        //
+    content: "";                                            //
+    display: inline-block;                                  //
+    position: absolute;                                     //
+    right: -0.25em;                                         //
+    bottom: -0.1em;                                         //
+    border-width: 0;                                        //
+    background: red;                                      //
+    width: 0.32em;                                          //
+    height: 0.08em;                                         //
+    -webkit-transform: rotate(45deg);                       //
+       -moz-transform: rotate(45deg);                       //
+        -ms-transform: rotate(45deg);                       //
+         -o-transform: rotate(45deg);                       //
+} // ...... fin de la shape Loupe ...........................
+
+
+.template_shiny{// pour les boutons vert-pomme
+    background-color: $shiny-color;
+    text-align: center;
+    max-width: 150px;
+}
+.param_cases{
+    padding: 5px;
+    white-space: nowrap; // = pas de retour à la ligne du texte du bloc en question
+}
+.case_top_menu{
+    border: 1px solid #ecf0f1;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header{
+    .row{
+        margin-bottom: 25px;
+    }
+    select{
+        height:30px;
+        //margin-top: 17px; //provisoirement, comme le menu déroulant ne s'aligne pas verticalement
+    }
+}
+
+
+// cadre des 7 boutons du menu principal
+.main_menu{
+    justify-content: center;
+
+// les 7 boutons du menu principal
+.case_main_menu{
+    border-right : 2px solid $shiny-color;
+    background-color: #ecf0f1;
+    box-shadow: 0px 1px 8px #bdc3c7;
+    text-align: center;
+    &:hover{
+        border-bottom: 5px solid $shiny-color;
+    }
+}
+
+}
+#txt_search{
+    box-shadow: inset 0px 3px 10px #bdc3c7; // inset pour ombre interieure
+}

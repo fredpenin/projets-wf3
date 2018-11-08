@@ -1,0 +1,226 @@
+@font-face{
+    font-family: "KingArthur";
+    src: url("../fonts/KingArthurLegend.ttf"); /* ".." sinon il cherche à partir du dossier css*/
+}
+@font-face{
+    font-family: "fraktur";
+    src: url("../fonts/ModerneFraktur.ttf");
+}
+
+
+
+body{
+    font-size:24px;
+    font-family: "fraktur", Georgia, serif;
+    /*background-repeat: no-repeat;
+    background-position:center;*/
+    /*background-image: radial-gradient(rgba(255, 255, 255, 0.5), rgba(92, 86, 86, 0.5)),url("../images/background1_k.jpg") no-repeat center;*/
+    background-image: url(../images/background1_k.jpg), radial-gradient(circle at center, white, #645A58) ;
+    background-attachment:fixed;
+    background-size:cover;/*contain;*/
+}
+
+/*MISE EN FORME DE LA STRUCTURE DE LA PAGE*/   
+header{
+    width:600px; height:100px;
+    margin:20px 5px 50px 150px; /*marges exterieures : haut droite bas gauche*/
+    padding:10px 10px 10px 10px;/*marges interieures*/
+    background-color: rgba(156, 23, 57, 0.6); /*rgba plutôt que #9C1739 pour l'opacité sinon texte transparent*/
+    border-width:8px; 
+    border-style:double;
+    border-top-right-radius : 30px;
+    border-bottom-left-radius:30px;
+    box-shadow: -7px -7px 10px black inset;
+    position : relative;
+    left : 200px;   
+}
+
+h1{
+    font-family: "KingArthur", Georgia, serif;
+    text-align: center;
+    font-size:2rem;
+    opacity:initial;
+    color:#FFBF21;
+    text-shadow:5px 5px 12px #FF4900;
+}
+
+h2{
+    font:inherit;
+}
+
+strong, em, mark{
+font:inherit;/*réinit de font-size / font-weight / font-style */
+}
+#labburger, #burger{
+    display:none;
+}
+nav{
+    width:220px; height:320px;
+    padding:10px 10px 10px 10px;
+    background-color:rgba(170,139,132,0.2);
+    float:left;
+    border-radius: 15px;
+    font-weight:bold;
+    font-size:1.5rem;
+    position: sticky;/*fixed;*/
+    top:20px;
+    line-height:100px;
+}
+
+a{
+    text-decoration: none;
+    color:#FF8000;
+
+}
+
+.survol:hover{
+    color:#FFB900;
+    font-size:1.8rem;
+    text-shadow: 8px 8px 10px #FF8000;
+}
+
+main{
+    width:1150; /*height:1350px;*/
+    margin:10px 10px 10px 50px;
+    padding:10px 10px 10px 10px;
+    background-color:rgba(252,220,176,0.2);
+    position : relative;
+    left : 200px;
+    border-radius: 15px;
+}
+
+section{
+    width:1100; /*height:1200px;*/
+    margin:10px 10px 10px 170px;
+    padding:10px 10px 10px 10px;
+    background-color:rgba(240,160,93,0.2);
+    position : relative;
+    right : 130px;
+    border-radius: 15px;
+}
+
+article, aside{
+    display:inline-block;/*pour mettre les blocks sur une même ligne*/
+    border-radius: 15px;
+    margin:0 0 30px 0;/*evite de mettre des <br> entre les articles et asides*/
+    padding:10px 10px 10px 10px;
+}
+
+main, nav, section, article, aside, footer{
+    box-shadow: -5px -5px 5px black inset;
+}
+
+video{
+    margin:0 0 0 130px;
+    border-radius:20px;
+    box-shadow: 10px 10px 10px #645A58;
+}
+
+article{
+    float:left;/*sur la gauche du conteneur section ? */
+    width:700px; /*height:210px;*/
+    background-color:rgba(227,169,157,0.2);
+    text-align:justify;
+}
+
+aside{
+    float:right;
+    width:275px; height:250px;
+    background-color:rgba(238,195,186,0.2);
+    border-radius: 15px;
+    
+}
+.clearboth{
+    clear: both; /* réinit des float entre les articles, évite les décalages pour les zooms */
+}
+
+/* dimension standard pour toutes les images des blocks aside : */
+.img-aside{
+    width:200px;
+    height:200px;
+    position : relative;
+    left : 35px; top:25px;
+    border-radius:15px;
+}
+
+footer{
+    width:700px; height:250px;
+    padding:40px 20px 10px 30px;
+    margin: 0 0 500px 350px;
+    background-color:rgba(170,139,132,0.2);
+    color:white;
+}
+td{
+    border:3px solid white;
+}
+/*
+#msgform{
+    width:370px; height:100px;
+}  pas besoin de créer un id, possible de l'appeler par son attribut name :*/
+[name="msg"]{
+    width:370px; height:100px;
+}
+
+#mailform{
+    width:370px;
+}
+table{
+    border-collapse:collapse;
+    /*border-style:solid;*/
+    border-width:5px;
+}
+
+/* .....RESPONSIVE DESIGN POUR SMARTPHONE..... */
+@media screen and (max-width: 1280px){
+    section{
+        width:750px;
+        margin:10px 10px 10px 170px;
+        padding:10px 10px 10px 10px;
+        background-color:rgba(240,160,93,0.2);
+        position : relative;
+        right : 130px;
+        border-radius: 15px;
+    }
+    main{
+        width:850px;
+        left : 20px;
+        border-radius: 15px;
+    }
+    aside{
+        display:none;
+    }
+    header{
+        display:flex;
+        justify-content : center;
+        margin:20px 5px 50px 0px;
+    }
+
+    .burgermenu{/* div qui englobe bouton et menu*/
+        position:fixed;
+        top:0px; left:0px;
+    }
+
+    #burger{/*id de l'input*/
+        display:none;
+    }
+    #labburger{
+        display:block;
+        position:fixed;
+        z-index:999;
+    }
+    #burger:checked + nav{
+        display:block;
+        z-index:998;
+    }
+
+    nav{
+        background-color:rgba(170,139,132,0.8);
+        z-index:99;
+        float:initial;
+        /*margin: 0 0 0 350px;*/
+        display:none;
+    }
+    footer{
+        margin: 50px 0 500px 125px;
+    }
+}
